@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  database:
+    image: mysql:latest
+    # Pull = Always => Force us to test new versions as they are published + forces us to have good seeding with commone baseline for development
+    pull_policy: always
+    # command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci -h0.0.0.0
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: progjog
+    ports:
+      - 3306:3306
