@@ -23,4 +23,7 @@
         <Folder Include="Data\Migrations" />
     </ItemGroup>
 
+    <ItemGroup>
+        <InternalsVisibleTo Include="progjog.Web.IntegrationTests" />
+    </ItemGroup>
 </Project>

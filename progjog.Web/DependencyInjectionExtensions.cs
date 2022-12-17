@@ -1,4 +1,5 @@
 using System;
+using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,5 +23,12 @@ public static class DependencyInjectionExtensions
             });
         
         services.AddDatabaseDeveloperPageExceptionFilter();
+    }
+    
+    public static void AddMapster(this IServiceCollection services)
+    {
+        var config = MapsterConfiguration.GetConfiguration();
+        services.AddSingleton(config);
+        services.AddTransient<IMapper, ServiceMapper>();
     }
 }
