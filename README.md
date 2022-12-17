@@ -4,9 +4,16 @@
 
 ## ⚡ Getting Started
 
-## 🔧 Building and Running
+## 🔧 Building and Running for Local Development
 
-**initiate user-secrets**
+### 🔨 Build the Project
+```shell
+dotnet build --project progjog.Core
+```
+
+### ▶ Running and Settings
+
+**Initiate user-secrets and configure settings**
 ```shell
 dotnet user-secrets init --project progjog.Core/
 dotnet user-secrets set "Database:ConnectionString" "Database:ConnectionString = Server=localhost;Port=3306;Database=progjog_db;Userid=root;Password=password;" --project progjog.Core/
@@ -16,9 +23,19 @@ dotnet user-secrets list --project progjog.Core/
 dotnet user-secrets remove "Database:Name" --project progjog.Core/
 ```
 
+**Run docker-compose for dev db**
+```shell
+docker-compose up -d 
+```
 
-### 🔨 Build the Project
+**Run migrations if new Db**
+```shell
+./update_dev_db.sh
+```
 
-### ▶ Running and Settings
+**Running**
+```shell
+dotnet run --project progjog.Core/
+```
 
 ## 🤝 Collaborate with My Project
