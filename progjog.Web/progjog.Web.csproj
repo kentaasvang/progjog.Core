@@ -7,8 +7,9 @@
         <UserSecretsId>aspnet-progjog.Core-30CA2D82-8137-4C3C-B371-8518A645FC06</UserSecretsId>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
-
     <ItemGroup>
+        <PackageReference Include="Mapster" Version="7.3.0" />
+        <PackageReference Include="Mapster.DependencyInjection" Version="1.0.0" />
         <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.11" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.11" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.11" />
@@ -19,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Data\Migrations" />
+        <Folder Include="Data\Migrations" />
     </ItemGroup>
 
 </Project>

@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Root", "Root", "{DB9A6C22-F
 		update_dev_db.sh = update_dev_db.sh
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "progjog.Web.UnitTests", "progjog.Web.UnitTests\progjog.Web.UnitTests.csproj", "{6DA1A2CC-DE3D-42C0-9BD4-A31217524B08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,5 +22,9 @@ Global
 		{D105FAA2-D408-4ED8-88F0-B1E93EABD127}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D105FAA2-D408-4ED8-88F0-B1E93EABD127}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D105FAA2-D408-4ED8-88F0-B1E93EABD127}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DA1A2CC-DE3D-42C0-9BD4-A31217524B08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DA1A2CC-DE3D-42C0-9BD4-A31217524B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DA1A2CC-DE3D-42C0-9BD4-A31217524B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DA1A2CC-DE3D-42C0-9BD4-A31217524B08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
