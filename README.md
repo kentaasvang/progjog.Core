@@ -9,7 +9,7 @@
 **initiate user-secrets**
 ```shell
 dotnet user-secrets init --project progjog.Core/
-dotnet user-secrets set "Database:ConnectionString" "Server=0.0.0.0;Port=3306;Database=progjog_db;Userid=progjog_user;Password=password;" --project progjog.Core/
+dotnet user-secrets set "Database:ConnectionString" "Database:ConnectionString = Server=localhost;Port=3306;Database=progjog_db;Userid=root;Password=password;" --project progjog.Core/
 # to list all secrets
 dotnet user-secrets list --project progjog.Core/
 # to remove a secret
