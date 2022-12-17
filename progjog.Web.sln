@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "progjog.Core", "progjog.Core\progjog.Core.csproj", "{D105FAA2-D408-4ED8-88F0-B1E93EABD127}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "progjog.Web", "progjog.Web\progjog.Web.csproj", "{D105FAA2-D408-4ED8-88F0-B1E93EABD127}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Root", "Root", "{DB9A6C22-F815-455A-A5CE-E3F5F04633DC}"
 	ProjectSection(SolutionItems) = preProject

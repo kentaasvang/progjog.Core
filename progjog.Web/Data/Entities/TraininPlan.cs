@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace progjog.Core.Data.Entities;
+namespace progjog.Web.Data.Entities;
 
 public class TrainingPlan
 {

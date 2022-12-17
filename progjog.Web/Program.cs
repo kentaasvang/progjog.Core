@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
-using progjog.Core;
-using progjog.Core.Data;
+using progjog.Web;
+using progjog.Web.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

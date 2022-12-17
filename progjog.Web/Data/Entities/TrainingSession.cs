@@ -1,4 +1,4 @@
-namespace progjog.Core.Data.Entities;
+namespace progjog.Web.Data.Entities;
 
 public class TrainingSession
 {

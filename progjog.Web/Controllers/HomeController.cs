@@ -1,16 +1,14 @@
 ﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using progjog.Core.Models;
+using progjog.Web.Models;
 
-namespace progjog.Core.Controllers;
+namespace progjog.Web.Controllers;
 
-[Authorize]
-public class MySiteController : Controller
+public class HomeController : Controller
 {
-    private readonly ILogger<MySiteController> _logger;
+    private readonly ILogger<HomeController> _logger;
 
-    public MySiteController(ILogger<MySiteController> logger)
+    public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
     }
@@ -19,8 +17,8 @@ public class MySiteController : Controller
     {
         return View();
     }
-    
-    public IActionResult CreateTrainingProgram()
+
+    public IActionResult Privacy()
     {
         return View();
     }

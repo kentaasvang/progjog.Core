@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using progjog.Core.Data.Entities;
+using progjog.Web.Data.Entities;
 
-namespace progjog.Core.Data;
+namespace progjog.Web.Data;
 
 public class ApplicationDbContext : IdentityDbContext
 {

@@ -1,4 +1,4 @@
-namespace progjog.Core.Models;
+namespace progjog.Web.Models;
 
 public class ErrorViewModel
 {

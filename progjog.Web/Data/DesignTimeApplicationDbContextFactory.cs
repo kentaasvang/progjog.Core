@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Infrastructure.Internal;
 
-namespace progjog.Core.Data;
+namespace progjog.Web.Data;
 
 public class DesignTimeApplicationDbContextFactory
 {
@@ -25,7 +25,7 @@ public class DesignTimeApplicationDbContextFactory
         private string GetConnectionString(string[] args)
         {
             var config = new ConfigurationBuilder()
-                .AddUserSecrets("aspnet-progjog.Core-30CA2D82-8137-4C3C-B371-8518A645FC06")
+                .AddUserSecrets("aspnet-progjog.Web-30CA2D82-8137-4C3C-B371-8518A645FC06")
                 .Build();
 
             var connectionString = config["Database:ConnectionString"] ??

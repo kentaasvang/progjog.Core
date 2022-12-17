@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using progjog.Core.Data;
+using progjog.Web.Data;
 
-namespace progjog.Core;
+namespace progjog.Web;
 
 public static class DependencyInjectionExtensions
 {

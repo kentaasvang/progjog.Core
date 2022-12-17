@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace progjog.Core.Data.Migrations
+namespace progjog.Web.Data.Migrations
 {
     public partial class InitialMigrationWithMySql : Migration
     {

@@ -2,17 +2,19 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using progjog.Core.Data;
+using progjog.Web.Data;
 
 #nullable disable
 
-namespace progjog.Core.Data.Migrations
+namespace progjog.Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221217113005_InitialMigrationWithMySql")]
+    partial class InitialMigrationWithMySql
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -211,7 +213,7 @@ namespace progjog.Core.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("progjog.Core.Data.Entities.TrainingPlan", b =>
+            modelBuilder.Entity("progjog.Web.Data.Entities.TrainingPlan", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("varchar(255)");
@@ -229,7 +231,7 @@ namespace progjog.Core.Data.Migrations
                     b.ToTable("TrainingPlans");
                 });
 
-            modelBuilder.Entity("progjog.Core.Data.Entities.TrainingSegment", b =>
+            modelBuilder.Entity("progjog.Web.Data.Entities.TrainingSegment", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("varchar(255)");
@@ -250,7 +252,7 @@ namespace progjog.Core.Data.Migrations
                     b.ToTable("TrainingSegments");
                 });
 
-            modelBuilder.Entity("progjog.Core.Data.Entities.TrainingSession", b =>
+            modelBuilder.Entity("progjog.Web.Data.Entities.TrainingSession", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("varchar(255)");
@@ -319,7 +321,7 @@ namespace progjog.Core.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("progjog.Core.Data.Entities.TrainingPlan", b =>
+            modelBuilder.Entity("progjog.Web.Data.Entities.TrainingPlan", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "Owner")
                         .WithMany()
@@ -328,26 +330,26 @@ namespace progjog.Core.Data.Migrations
                     b.Navigation("Owner");
                 });
 
-            modelBuilder.Entity("progjog.Core.Data.Entities.TrainingSegment", b =>
+            modelBuilder.Entity("progjog.Web.Data.Entities.TrainingSegment", b =>
                 {
-                    b.HasOne("progjog.Core.Data.Entities.TrainingSession", null)
+                    b.HasOne("progjog.Web.Data.Entities.TrainingSession", null)
                         .WithMany("TrainingSegments")
                         .HasForeignKey("TrainingSessionId");
                 });
 
-            modelBuilder.Entity("progjog.Core.Data.Entities.TrainingSession", b =>
+            modelBuilder.Entity("progjog.Web.Data.Entities.TrainingSession", b =>
                 {
-                    b.HasOne("progjog.Core.Data.Entities.TrainingPlan", null)
+                    b.HasOne("progjog.Web.Data.Entities.TrainingPlan", null)
                         .WithMany("TrainingSessions")
                         .HasForeignKey("TrainingPlanId");
                 });
 
-            modelBuilder.Entity("progjog.Core.Data.Entities.TrainingPlan", b =>
+            modelBuilder.Entity("progjog.Web.Data.Entities.TrainingPlan", b =>
                 {
                     b.Navigation("TrainingSessions");
                 });
 
-            modelBuilder.Entity("progjog.Core.Data.Entities.TrainingSession", b =>
+            modelBuilder.Entity("progjog.Web.Data.Entities.TrainingSession", b =>
                 {
                     b.Navigation("TrainingSegments");
                 });
