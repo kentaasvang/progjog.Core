@@ -1,8 +1,9 @@
-# 🆕 My Project
+# 🆕 ProgJog
 
-## ❓ What is My Project?
+## ❓ What it is
+Simple website where you can create and/or browse though training plans.
 
-## ⚡ Getting Started
+[//]: # (## ⚡ Getting Started)
 
 ## 🔧 Building and Running for Local Development
 
@@ -39,3 +40,4 @@ dotnet run --project progjog.Core/
 ```
 
 ## 🤝 Collaborate with My Project
+No one can stop you.
