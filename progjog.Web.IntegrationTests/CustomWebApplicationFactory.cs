@@ -18,11 +18,11 @@ public class CustomWebApplicationFactory<TProgram> : WebApplicationFactory<TProg
     {
         builder.ConfigureServices(services =>
         {
-            // var dbContextDescriptor = services.SingleOrDefault(
-            //     d => d.ServiceType == typeof(DbContextOptions<ApplicationDbContext>)) ?? 
-            //                           throw new NullReferenceException($"'DbContextOptions' cannot be null in {nameof(CustomWebApplicationFactory<TProgram>)}");
-            //
-            // services.Remove(dbContextDescriptor);
+            var dbContextDescriptor = services.SingleOrDefault(
+                d => d.ServiceType == typeof(DbContextOptions<ApplicationDbContext>)) ?? 
+                                      throw new NullReferenceException($"'DbContextOptions' cannot be null in {nameof(CustomWebApplicationFactory<TProgram>)}");
+            
+            services.Remove(dbContextDescriptor);
 
             services.RemoveAll(typeof(ApplicationDbContext));
             services.AddDbContext<ApplicationDbContext>(options =>
