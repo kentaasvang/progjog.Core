@@ -1,6 +1,4 @@
-
-
-name: UnitTests
+name: IntegrationTests
 
 on:
   pull_request:
@@ -17,8 +15,8 @@ jobs:
     runs-on: ubuntu-22.04 
 
     env:
-      Solution_Name: progjog.Web.sln                         # Replace with your solution name, i.e. MyWpfApp.sln.
-      Test_Project_Path: progjog.Web.UnitTests/progjog.Web.UnitTests.csproj                # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
+      Solution_Name: progjog.Web.sln
+      Test_Project_Path: progjog.Web.IntegrationTests/progjog.Web.IntegrationTests.csproj                
 
 
     steps:
@@ -36,4 +34,3 @@ jobs:
     # Execute all unit tests in the solution
     - name: Execute unit tests
       run: dotnet test
-
