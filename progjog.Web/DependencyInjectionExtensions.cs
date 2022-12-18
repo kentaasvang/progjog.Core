@@ -9,9 +9,12 @@ public static class DependencyInjectionExtensions
 {
     public static void AddApplicationDbContext(this IServiceCollection services, IConfiguration config)
     {
-        var connectionString = config["Database:ConnectionString"] ??
-                               throw new NullReferenceException(
-                                   $"'connectionString' is missing in {nameof(AddApplicationDbContext)}");
+        var connectionString = config["Database:ConnectionString"];
+
+    #if !DEBUG
+        if (connectionString is null)
+            throw new NullReferenceException($"'connectionString' is missing in {nameof(AddApplicationDbContext)}");
+    #endif
 
         var version = new Version(8, 0, 31);
         var serverVersion = ServerVersion.Create(version, ServerType.MySql);
